@@ -1,4 +1,4 @@
-package others;
+package dynamicprogramming;
 
 public class GridTraveller {
 

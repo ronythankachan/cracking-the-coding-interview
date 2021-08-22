@@ -6,17 +6,12 @@ import java.util.HashMap;
 
 public class HowSum {
 
+	// Values from an array that can obtain a target sum
 	public static ArrayList<Integer> howSum(int target, ArrayList<Integer> values,
 			HashMap<Integer, ArrayList<Integer>> memo) {
-
-		if (memo.containsKey(target))
-			return memo.get(target);
-
-		if (target == 0)
-			return new ArrayList<Integer>();
-		if (target < 0)
-			return null;
-
+		if (memo.containsKey(target)) return memo.get(target);
+		if (target == 0) return new ArrayList<Integer>();
+		if (target < 0) return null;
 		for (int value : values) {
 			ArrayList<Integer> result = howSum(target - value, values, memo);
 			if (result != null) {
@@ -30,8 +25,8 @@ public class HowSum {
 	}
 
 	public static void main(String[] args) {
-		int target = 300;
-		ArrayList<Integer> values = new ArrayList<>(Arrays.asList(7,14));
+		int target = 7;
+		ArrayList<Integer> values = new ArrayList<>(Arrays.asList(2,4,7,14));
 		HashMap<Integer, ArrayList<Integer>> memo = new HashMap<Integer, ArrayList<Integer>>();
 		ArrayList<Integer> result = HowSum.howSum(target, values, memo);
 

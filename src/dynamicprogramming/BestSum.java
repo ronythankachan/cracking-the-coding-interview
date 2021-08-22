@@ -29,7 +29,7 @@ public class BestSum {
 	}
 
 	public static void main(String[] args) {
-		int target = 7;
+		int target = 7;		
 		ArrayList<Integer> values = new ArrayList<Integer>(Arrays.asList(4, 5));
 		ArrayList<Integer> result = BestSum.bestSum(target, values);
 		if (result == null)

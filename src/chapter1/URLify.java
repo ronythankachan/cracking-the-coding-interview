@@ -45,6 +45,7 @@ public class URLify {
 	
 	public static void main(String[] args) {
 		String test1 = "hello dear friend         ";
+		
 		System.out.println(replaceCharacter2(test1,17));
 	}
 }
